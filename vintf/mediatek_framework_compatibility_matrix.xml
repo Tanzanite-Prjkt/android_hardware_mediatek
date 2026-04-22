@@ -102,6 +102,13 @@
             <instance>imsSlot4</instance>
         </interface>
     </hal>
+    <hal format="aidl">
+        <name>android.se.omapi</name>
+        <interface>
+            <name>ISecureElementService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <hal format="aidl" optional="true">
         <name>arm.mali.platform</name>
         <version>1-2</version>
