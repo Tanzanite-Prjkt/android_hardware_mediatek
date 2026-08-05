@@ -136,6 +136,13 @@
             <instance>apm_hidl_service</instance>
         </interface>
     </hal>
+    <hal format="aidl">
+        <name>vendor.mediatek.hardware.apuware.aiste</name>
+        <interface>
+            <name>IAisteService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <hal format="hidl" optional="true">
         <name>vendor.mediatek.hardware.apuware.apusys</name>
         <transport>hwbinder</transport>
