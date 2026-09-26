@@ -8,13 +8,13 @@
 
 #include <log/log.h>
 
-int PowerHal_Wrap_mtkPowerHint(int hint, int data)
+__attribute__((weak)) int PowerHal_Wrap_mtkPowerHint(int hint, int data)
 {
     ALOGD("[%s]: hint:%d, data:%d", __func__, hint, data);
     return 0;
 }
 
-int PowerHal_Wrap_mtkCusPowerHint(int hint, int data)
+__attribute__((weak)) int PowerHal_Wrap_mtkCusPowerHint(int hint, int data)
 {
     ALOGD("[%s]: hint:%d, data:%d", __func__, hint, data);
     return 0;
