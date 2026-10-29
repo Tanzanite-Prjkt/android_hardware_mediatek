@@ -82,6 +82,9 @@ class BluetoothDeathRecipient {
 
   void UnlinkToDeath(const std::shared_ptr<IBluetoothHciCallbacks>& cb) {
     LOG_ALWAYS_FATAL_IF(cb != mCb, "Unable to unlink mismatched pointers");
+        AIBinder_unlinkToDeath(mCb->asBinder().get(), clientDeathRecipient_, this /* cookie */);
+        AIBinder_DeathRecipient_delete(clientDeathRecipient_);
+        mCb = nullptr;
   }
 
   void serviceDied() {
@@ -196,6 +199,7 @@ ndk::ScopedAStatus BluetoothHci::initialize(
   }
 
   mCb = cb;
+    mDeathRecipient->LinkToDeath(cb);
   {
     std::lock_guard<std::mutex> guard(mStateMutex);
     mState = HalState::ONE_CLIENT;
@@ -218,6 +222,7 @@ ndk::ScopedAStatus BluetoothHci::close() {
   }
   ALOGI("%s: HalState set moving to CLOSING", __func__);
   VendorInterface::Shutdown();
+    mDeathRecipient->UnlinkToDeath(mCb);
   {
     std::lock_guard<std::mutex> guard(mStateMutex);
     mState = HalState::READY;
