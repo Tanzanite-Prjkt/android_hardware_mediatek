@@ -48,7 +48,7 @@
     </hal>
     <hal format="aidl" optional="true">
         <name>android.hardware.radio.modem</name>
-        <version>1-2</version>
+        <version>1-5</version>
         <interface>
             <name>IRadioModem</name>
             <instance>slot4</instance>
@@ -64,7 +64,7 @@
     </hal>
     <hal format="aidl" optional="true">
         <name>android.hardware.radio.network</name>
-        <version>1-2</version>
+        <version>1-5</version>
         <interface>
             <name>IRadioNetwork</name>
             <instance>slot4</instance>
@@ -76,7 +76,7 @@
     </hal>
     <hal format="aidl" optional="true">
         <name>android.hardware.radio.sim</name>
-        <version>1-2</version>
+        <version>1-5</version>
         <interface>
             <name>IRadioSim</name>
             <instance>slot4</instance>
@@ -92,7 +92,7 @@
     </hal>
     <hal format="aidl" optional="true">
         <name>android.hardware.radio.voice</name>
-        <version>1-2</version>
+        <version>1-5</version>
         <interface>
             <name>IRadioVoice</name>
             <instance>slot4</instance>
