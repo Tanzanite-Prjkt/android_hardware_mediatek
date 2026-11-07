@@ -210,7 +210,7 @@
     </hal>
     <hal format="aidl" optional="true">
         <name>vendor.mediatek.hardware.audio</name>
-        <version>1</version>
+        <version>1-2</version>
         <interface>
             <name>IMtkAudio</name>
             <instance>default</instance>
