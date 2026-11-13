@@ -841,6 +841,13 @@
             <instance>default</instance>
         </interface>
     </hal>
+    <hal format="aidl">
+        <name>vendor.mediatek.hardware.neuropilot.scheduling</name>
+        <interface>
+            <name>INpScheduling</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <hal format="aidl" optional="true">
         <name>vendor.mediatek.hardware.nvram</name>
         <version>1</version>
